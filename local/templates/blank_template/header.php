@@ -3,6 +3,8 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 IncludeTemplateLangFile(__FILE__);
 global $APPLICATION;
 use \Bitrix\Main\Page\Asset;
+use \Bitrix\Main\UI\Extension;
+Extension::load('ui.bootstrap4');
 include_once('meta.php');
 ?>
 <!doctype html>
@@ -20,3 +22,4 @@ include_once('meta.php');
 	<body>
 		<div id="panel"><?$APPLICATION->ShowPanel();?></div>
 		<h1 id="pagetitle"><?$APPLICATION->ShowTitle(false);?></h1>
+		<div class="red_text">test</div>
